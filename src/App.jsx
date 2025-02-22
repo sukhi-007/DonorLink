@@ -5,6 +5,7 @@ import SignupForm from "./SignupForm";
 import Donor from "./Donor"; 
 import DonorLink from "./DonorLink";
 import Leaderboard from "./Leaderboard";
+import BloodBankRegistration from "./BloodBankRegistration";
 import "./App.css";
 
 function LoginSignupPage() {
@@ -26,7 +27,7 @@ function LoginSignupPage() {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (formType === "login" || formType === "signup") {
-      navigate("/Donor");
+      navigate("/BloodBankRegistration");
     }
   };
 
@@ -68,6 +69,7 @@ function App() {
     <Router>
       <Routes>
         <Route path="/" element={<DonorLink />} />
+        <Route path="/BloodBankRegistration" element={<BloodBankRegistration />} />
         <Route path="/LoginSignupPage" element={<LoginSignupPage />} />
         <Route path="/Donor" element={<Donor />} />
         <Route path="/Leaderboard" element={<Leaderboard />} />
